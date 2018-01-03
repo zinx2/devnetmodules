@@ -29,6 +29,7 @@ Paper {
             rectColor: "orange"
             textColor: "white"
             fontSize: R.pt(15)
+            on_Clicked: console.log(md.title)
         }
 
 

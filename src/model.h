@@ -49,7 +49,7 @@ class Model : public QObject
 	Q_OBJECT
         Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
         Q_PROPERTY(QList<QObject*> list READ list NOTIFY listChanged)
-
+		Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
 public:
 	Model()
 	{	
@@ -101,8 +101,10 @@ public:
     Q_INVOKABLE QString getSrc(int index) { return qobject_cast<Concept*>(m_list[index])->src(); }
     Q_INVOKABLE QList<QObject*> list() const { return m_list; }
     Q_INVOKABLE QObject* getCurrentConcept() { return m_list[m_currentIndex]; }
+	Q_INVOKABLE QString title() const { return m_title; }
 
 public slots:
+	void setTitle(const QString m) { m_title = m; emit titleChanged(); }
     void setCurrentIndex(const int id) { m_currentIndex = id; emit currentIndexChanged(); }
     void initializeIndex() { m_currentIndex = -1; }
     void initialize()
@@ -132,9 +134,10 @@ public slots:
 signals:
     void listChanged();
     void currentIndexChanged();
+	void titleChanged();
 
 private:
     QList<QObject*> m_list;
     int m_currentIndex = 0;
-
+	QString m_title = " XXX";
 };

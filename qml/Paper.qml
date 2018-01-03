@@ -7,7 +7,7 @@ Rectangle {
 
     property bool visibleBackBtn : true
     property bool visibleSearchBtn : true
-    property string titleText : R.string_title    
+    property string titleText : opt.ds ? R.string_title : md.title
     signal evtBack()
     signal evtSearch()
 

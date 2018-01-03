@@ -16,7 +16,9 @@ HEADERS += \
     src/display_information.h \
     src/native_app.h \
     src/model.h \
-    src/option.h
+    src/option.h \
+    src/nettask.h \
+    src/networker.h
 
 SOURCES += \
     src/main.cpp \
