@@ -191,9 +191,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="src\display_information.cpp" />
+    <ClCompile Include="src\instance_creator.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\native_app.cpp" />
     <ClCompile Include="src\nettask.cpp" />
+    <ClCompile Include="src\networker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="src\display_information.h">

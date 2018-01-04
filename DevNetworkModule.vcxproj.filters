@@ -114,6 +114,12 @@
     <ClCompile Include="src\nettask.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\networker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\instance_creator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="src\display_information.h">
