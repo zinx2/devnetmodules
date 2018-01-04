@@ -52,9 +52,10 @@ class Model : public QObject
 		Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
 		Q_PROPERTY(QString error READ error WRITE setError NOTIFY errorChanged)
 public:
-	Model()
-	{	
-        
+	static Model* getInstance() {
+		if (m_instance == nullptr)
+			m_instance = new Model();
+		return m_instance;
 	}
 
     Q_INVOKABLE int currentIndex() const { return m_currentIndex; }
@@ -102,6 +103,9 @@ signals:
 	void errorChanged();
 
 private:
+	static Model* m_instance;
+	Model()	{ }
+
     QList<QObject*> m_list;
     int m_currentIndex = 0;
 	QString m_title = "TITLE";

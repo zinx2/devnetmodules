@@ -10,17 +10,15 @@ class NetTask : public QObject
       
 public:
 	explicit NetTask(QObject* parent = 0);
-	void setModel(Model* m) { m_model = m; }
+	~NetTask();
+	
+	void request(QString urlStr);
 
 	public slots:
-	void request(QString urlStr);
+	
 	void test();
 	void title();
-	void httpFinished();
-	void httpReadRead();
-	void httpEncrypted();
-	void httpMetaDataChanged();
-	void httpRedirectAllowed();
+
 
 private:	
 	Model* m_model = nullptr;

@@ -4,26 +4,25 @@
 #include <QThread>
 #include "model.h"
 #include "nettask.h"
+
+class QNetworkReply;
 class NetWorker : public QObject
 {
 	Q_OBJECT
 public:
-	NetWorker(Model* m, QObject *parent = NULL) : QObject(parent)
-	{
-		m_netTask = new NetTask(this);
-		QThread* th = new QThread(this);
-		m_netTask->moveToThread(th);
-		m_netTask->setModel(m);
-	}
+	NetWorker(Model* m, QObject *parent = NULL);
+	~NetWorker();
 
-	/*NetWorker* getInstance()
-	{
-		if (m_instance == nullptr)
-			m_instance = new NetWorker();
-		return m_instance;
-	}*/
+	public slots:
+	void httpFinished();
+	void httpReadRead();
+	void httpEncrypted();
+	void httpMetaDataChanged();
+	void httpRedirectAllowed();
 	
 private:
 	NetWorker* m_instance;
 	NetTask* m_netTask;
+	QNetworkReply* m_netReply;
+	Model* m_model;
 };

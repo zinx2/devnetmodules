@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 //    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
     DisplayInfo dpInfo;
-	Model *model = new Model();
+	Model *model = Model::getInstance();//new Model();
 	Option opt; opt.setDs(false);
 
 	NetWorker* wk = new NetWorker(model);
