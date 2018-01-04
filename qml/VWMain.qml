@@ -18,6 +18,14 @@ Paper {
         spacing: 1
 
 
+        CPText
+        {
+            text: md.error
+            font.pointSize: R.pt(22)
+            width: parent.width
+            horizontalAlignment: Text.AlignHCenter
+        }
+
         CPButton
         {
             sourceWidth: parent.width
@@ -29,7 +37,10 @@ Paper {
             rectColor: "orange"
             textColor: "white"
             fontSize: R.pt(15)
-            on_Clicked: console.log(md.title)
+            on_Clicked: {
+                nt.title();
+                nt.request("http://35.194.231.178:8080/test");
+            }
         }
 
 

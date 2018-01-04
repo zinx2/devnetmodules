@@ -14,7 +14,7 @@ ApplicationWindow {
 
     Component.onCompleted: {
 
-        toast("본 앱에 포함된 카툰의 저작권은 GS인터비전에 있으니 무단 복제를 금합니다.");
+        //toast("본 앱에 포함된 카툰의 저작권은 GS인터비전에 있으니 무단 복제를 금합니다.");
         fadeoutTimer.running = true;
         console.log(R.design_size_width)
     }

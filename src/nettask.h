@@ -1,39 +1,31 @@
 #pragma once
 #include <QObject>
-#include <QTimer>
-#include <QDebug>
-#include "model.h"
+#include <QNetworkAccessManager>
 
+class QNetworkReply;
+class Model;
 class NetTask : public QObject
 {
 	Q_OBJECT
+      
 public:
-	explicit NetTask(QObject* parent = 0) : QObject(parent)	{ }
+	explicit NetTask(QObject* parent = 0);
 	void setModel(Model* m) { m_model = m; }
 
-	void setTimer()
-	{
-		m_timer = new QTimer(this);
-		connect(m_timer, SIGNAL(timeout()), this, SLOT(test()));
-		//m_timer->setInterval(1000);
-		QTimer::singleShot(1000, this, SLOT(test()));
-		m_timer->start(1000);
-	}
-
 	public slots:
-	void test() { 
-		//qDebug() << "TESTING...";	
-		if (m_model != nullptr)
-			m_model->setTitle("title" + QString::number(cnt));
+	void request(QString urlStr);
+	void test();
+	void title();
+	void httpFinished();
+	void httpReadRead();
+	void httpEncrypted();
+	void httpMetaDataChanged();
+	void httpRedirectAllowed();
 
-		cnt++;
-	}
-
-private:
-	QTimer* m_timer;
+private:	
 	Model* m_model = nullptr;
-
 	int cnt = 0;
-	
 
+	QNetworkAccessManager m_netManager;
+	QNetworkReply *m_netReply;
 };
