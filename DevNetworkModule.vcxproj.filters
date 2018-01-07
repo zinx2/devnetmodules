@@ -84,12 +84,6 @@
     <ClCompile Include="Release\moc_networker.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="Debug\moc_nettask.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_nettask.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
     <ClCompile Include="Debug\moc_native_app.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
@@ -111,9 +105,6 @@
     <ClCompile Include="GeneratedFiles\qrc_qml.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\nettask.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\networker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -129,9 +120,6 @@
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="src\native_app.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="src\nettask.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="src\networker.h">

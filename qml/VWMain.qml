@@ -10,76 +10,98 @@ Paper {
     //    width: R.design_size_width
     //    height: R.design_size_height
 
-    Column
+    ScrollView
     {
+        id: scrollView
+        clip: true
         width: parent.width
-        height: parent.height
-        y: R.height_titlaBar + 1
-        spacing: 1
+        height: parent.height - R.height_titlaBar - 1
+         y: R.height_titlaBar + 1
 
-
-        CPText
+        Column
         {
-            text: md.error
-            font.pointSize: R.pt(22)
-            width: parent.width
-            horizontalAlignment: Text.AlignHCenter
-        }
+            width: scrollView.width
+            height: scrollView.height
+            spacing: 1
 
-        CPButton
-        {
-            sourceWidth: parent.width
-            sourceHeight: R.dp(100)
-            width: parent.width
-            height: R.dp(100)
-            type: "text"
-            btnName: "THERAD TEST.."
-            rectColor: "orange"
-            textColor: "white"
-            fontSize: R.pt(15)
-            on_Clicked: {
-                nt.title();
-                nt.request("http://35.194.231.178:8080/test");
+            CPText
+            {
+                text: md.error
+                font.pointSize: R.pt(22)
+                width: parent.width
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            CPButton
+            {
+                sourceWidth: parent.width
+                sourceHeight: R.dp(100)
+                width: parent.width
+                height: R.dp(100)
+                type: "text"
+                btnName: "GET ALL DEMO LIST~"
+                rectColor: "orange"
+                textColor: "white"
+                fontSize: R.pt(15)
+                on_Clicked: {
+    //                nt.title();
+                    wk.getDemoAll();
+                }
+            }
+
+
+            CPButton
+            {
+                sourceWidth: parent.width
+                sourceHeight: R.dp(100)
+                width: parent.width
+                height: R.dp(100)
+                type: "text"
+                btnName: "GET A DEMO."
+                rectColor: "orange"
+                textColor: "white"
+                fontSize: R.pt(15)
+                on_Clicked:
+                {
+                    wk.getDemo(15);
+                }
+            }
+
+            CPButton
+            {
+                sourceWidth: parent.width
+                sourceHeight: R.dp(100)
+                width: parent.width
+                height: R.dp(100)
+                type: "text"
+                btnName: "POST ALL DEMO LIST~"
+                rectColor: "orange"
+                textColor: "white"
+                fontSize: R.pt(15)
+                on_Clicked: {
+                    wk.postDemoAll();
+                }
+            }
+
+            CPButton
+            {
+                sourceWidth: parent.width
+                sourceHeight: R.dp(100)
+                width: parent.width
+                height: R.dp(100)
+                type: "text"
+                btnName: "POST A DEMO ~"
+                rectColor: "orange"
+                textColor: "white"
+                fontSize: R.pt(15)
+                on_Clicked: {
+                    wk.postDemo(11);
+                }
             }
         }
-
-
-        CPButton
-        {
-            sourceWidth: parent.width
-            sourceHeight: R.dp(100)
-            width: parent.width
-            height: R.dp(100)
-            type: "text"
-            btnName: "단순 통신 테스트."
-            rectColor: "orange"
-            textColor: "white"
-            fontSize: R.pt(15)
-        }
-
-        CPButton
-        {
-            sourceWidth: parent.width
-            sourceHeight: R.dp(100)
-            width: parent.width
-            height: R.dp(100)
-            type: "text"
-            btnName: "IMAGE LAZY LOADING."
-            rectColor: "orange"
-            textColor: "white"
-            fontSize: R.pt(15)
-        }
-
-//        CPButton
-//        {
-
-//        }
-
-//        CPButton
-//        {
-
-//        }
     }
+
+
 
 
 }

@@ -17,13 +17,14 @@ HEADERS += \
     src/native_app.h \
     src/model.h \
     src/option.h \
-    src/nettask.h \
     src/networker.h
 
 SOURCES += \
     src/main.cpp \
     src/native_app.cpp \
-    src/display_information.cpp
+    src/display_information.cpp \
+    src/networker.cpp \
+    src/instance_creator.cpp
 
 RESOURCES += qml.qrc \
     img.qrc \
