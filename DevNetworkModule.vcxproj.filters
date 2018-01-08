@@ -111,6 +111,21 @@
     <ClCompile Include="src\instance_creator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Debug\moc_imageresponseprovider.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_imageresponseprovider.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_imagebinaryloader.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_imagebinaryloader.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imagebinaryloader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="src\display_information.h">
@@ -126,6 +141,12 @@
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="src\option.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\imageresponseprovider.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\imagebinaryloader.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>

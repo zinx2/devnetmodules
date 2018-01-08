@@ -4,7 +4,9 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QJsonValue>
+#include "imageresponseprovider.h"
 
+NetWorker* NetWorker::m_instance = nullptr;
 NetWorker::NetWorker(QObject *parent) : QObject(parent)
 {
 	m_model = Model::getInstance();

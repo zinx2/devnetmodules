@@ -7,16 +7,21 @@
 #include <QMutex>
 #include <QUrlQuery>
 #include "model.h"
+#include <QImage>
 
 class NetWorker : public QObject
 {
 	Q_OBJECT
 public:
-	NetWorker(QObject *parent = NULL);
-	~NetWorker();
+	static NetWorker* getInstance() 
+	{
+		if (m_instance == nullptr)
+			m_instance = new NetWorker();
+		return m_instance;
+	}
 
 	void requestGET(QNetworkRequest req, std::function<void()> parser);
-	void requestPOST(QNetworkRequest req, std::function<void()> parser);
+	void requestPOST(QNetworkRequest req, std::function<void()> parser);	
 
 	public slots:
 	void httpError(QNetworkReply::NetworkError msg);	
@@ -26,13 +31,16 @@ public:
 	void getDemo(int id);	
 	void postDemoAll();
 	void postDemo(int id);
+	
 
 private:
 	QNetworkRequest createRequest(QString suffixUrl);
 	
 private:	
+	NetWorker(QObject *parent = NULL);
+	~NetWorker();
 
-	NetWorker* m_instance;
+	static NetWorker* m_instance;
 	QNetworkReply* m_netReply;
 	Model* m_model = nullptr;
 	QNetworkAccessManager m_netManager;	

@@ -139,6 +139,12 @@
     <ClCompile Include="Debug\moc_display_information.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Debug\moc_imagebinaryloader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_imageresponseprovider.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Debug\moc_model.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -172,6 +178,12 @@
     <ClCompile Include="Release\moc_display_information.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Release\moc_imagebinaryloader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_imageresponseprovider.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Release\moc_model.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -185,6 +197,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="src\display_information.cpp" />
+    <ClCompile Include="src\imagebinaryloader.cpp" />
     <ClCompile Include="src\instance_creator.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\native_app.cpp" />
@@ -586,6 +599,30 @@
     <None Include="img\splash.jpg" />
     <None Include="android-sources-native\app\res\values\strings.xml" />
     <None Include="android-sources-native\app\res\values\styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\imageresponseprovider.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing imageresponseprovider.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_DEPRECATED_WARNINGS -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB "-I." "-I.\..\..\QT\5.9.2\MSVC2015_64\include" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtQuickControls2" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtQuick" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtGui" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtANGLE" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtQml" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtNetwork" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtCore" "-I.\debug" "-I.\..\..\QT\5.9.2\MSVC2015_64\mkspecs\win32-msvc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing imageresponseprovider.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG "-I." "-I.\..\..\QT\5.9.2\MSVC2015_64\include" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtQuickControls2" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtQuick" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtGui" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtANGLE" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtQml" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtNetwork" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtCore" "-I.\release" "-I.\..\..\QT\5.9.2\MSVC2015_64\mkspecs\win32-msvc"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\imagebinaryloader.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing imagebinaryloader.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_DEPRECATED_WARNINGS -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB "-I." "-I.\..\..\QT\5.9.2\MSVC2015_64\include" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtQuickControls2" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtQuick" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtGui" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtANGLE" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtQml" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtNetwork" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtCore" "-I.\debug" "-I.\..\..\QT\5.9.2\MSVC2015_64\mkspecs\win32-msvc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing imagebinaryloader.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG "-I." "-I.\..\..\QT\5.9.2\MSVC2015_64\include" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtQuickControls2" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtQuick" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtGui" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtANGLE" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtQml" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtNetwork" "-I.\..\..\QT\5.9.2\MSVC2015_64\include\QtCore" "-I.\release" "-I.\..\..\QT\5.9.2\MSVC2015_64\mkspecs\win32-msvc"</Command>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

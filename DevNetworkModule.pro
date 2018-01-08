@@ -1,5 +1,8 @@
 QT += quick quickcontrols2 network
 CONFIG += c++11
+#plugin
+#DESTDIR = ImageResponseProviderCore
+#TARGET = qmlimageresponseproviderplugin
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -17,14 +20,17 @@ HEADERS += \
     src/native_app.h \
     src/model.h \
     src/option.h \
-    src/networker.h
+    src/networker.h \
+    src/imageresponseprovider.h \
+    src/imagebinaryloader.h
 
 SOURCES += \
     src/main.cpp \
     src/native_app.cpp \
     src/display_information.cpp \
     src/networker.cpp \
-    src/instance_creator.cpp
+    src/instance_creator.cpp \
+    src/imagebinaryloader.cpp
 
 RESOURCES += qml.qrc \
     img.qrc \

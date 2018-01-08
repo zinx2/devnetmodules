@@ -15,5 +15,6 @@
         <file>qml/CPTextField.qml</file>
         <file>qml/VWDesc.qml</file>
         <file>qml/CPImageView.qml</file>
+        <file>qml/CPImage.qml</file>
     </qresource>
 </RCC>
