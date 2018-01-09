@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/android-sources-native.iml" filepath="$PROJECT_DIR$/android-sources-native.iml" />
+      <module fileurl="file://C:\Github\devnetmodules\android-sources-native\android-sources-native.iml" filepath="C:\Github\devnetmodules\android-sources-native\android-sources-native.iml" />
     </modules>
   </component>
 </project>
