@@ -12,18 +12,18 @@ import net.techpda.snslogin.R;
  * Created by JHKim on 2018-01-10.
  */
 
-public class UserKaKao extends Activity {
+public class UserKakao extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_kako);
+        setContentView(R.layout.activity_user_kakao);
 
         Button btnKakaoRequestUserInfo = (Button) findViewById(R.id.btnKakaoRequestUserInfo);
         btnKakaoRequestUserInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UserKaKao.this, "카카오 사용자 정보 요청", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UserKakao.this, "카카오 사용자 정보 요청", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -31,7 +31,7 @@ public class UserKaKao extends Activity {
         btnKakaoSaveUserInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UserKaKao.this, "카카오 사용자 정보 저장", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UserKakao.this, "카카오 사용자 정보 저장", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -39,7 +39,7 @@ public class UserKaKao extends Activity {
         btnKakaoConnectApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UserKaKao.this, "카카오 앱 연결", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UserKakao.this, "카카오 앱 연결", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -47,7 +47,7 @@ public class UserKaKao extends Activity {
         btnKakaoDisconnectApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UserKaKao.this, "카카오 앱 연결 해제", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UserKakao.this, "카카오 앱 연결 해제", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -55,7 +55,7 @@ public class UserKaKao extends Activity {
         btnKakaoLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UserKaKao.this, "카카오 로그인", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UserKakao.this, "카카오 로그인", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -63,7 +63,7 @@ public class UserKaKao extends Activity {
         btnKakaoLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UserKaKao.this, "카카오 로그아웃", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UserKakao.this, "카카오 로그아웃", Toast.LENGTH_SHORT).show();
             }
         });
     }
