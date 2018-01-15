@@ -16,7 +16,7 @@ Rectangle {
     else return 1
   }
 
-  signal _clicked()
+  signal clicked()
 
   property string imageSource: "../img/back_white.png"  //아이콘
   property string pressedImageSource : imageSource
@@ -92,7 +92,7 @@ Rectangle {
     hoverEnabled: btn.hoverEnabled
     cursorShape: Qt.PointingHandCursor
     onClicked: {
-      btn._clicked()
+      btn.clicked()
     }
   }
 }

@@ -1,43 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<com.kakao.usermgmt.LoginButton-->
+        <!--android:id="@+id/com_kakao_login"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_margin="20dp"/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/btnFacebook"-->
+
+
+
+
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Button
-        android:id="@+id/btnKakaoRequestUserInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorPrimary"
-        android:text="@string/btnKakaoRequestUserInfo"
-        android:textColor="#ffffff"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <Button
-        android:id="@+id/btnKakaoSaveUserInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorPrimary"
-        android:text="@string/btnKakaoSaveUserInfo"
-        android:textColor="#ffffff"
-        app:layout_constraintTop_toBottomOf="@+id/btnKakaoRequestUserInfo"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <Button
-        android:id="@+id/btnKakaoConnectApp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorPrimary"
-        android:text="@string/btnKakaoConnectApp"
-        android:textColor="#ffffff"
-        app:layout_constraintTop_toBottomOf="@+id/btnKakaoSaveUserInfo"
-        tools:layout_editor_absoluteX="0dp" />
-
     <Button
         android:id="@+id/btnKakaoDisconnectApp"
         android:layout_width="match_parent"
@@ -46,7 +29,7 @@
         android:background="@color/colorPrimary"
         android:text="@string/btnKakaoDisconnectApp"
         android:textColor="#ffffff"
-        app:layout_constraintTop_toBottomOf="@+id/btnKakaoConnectApp"
+        app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
     <Button
@@ -55,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@color/colorPrimary"
-        android:text="@string/btnKakaoLogin"
+        android:text="카카오 로그인"
         android:textColor="#ffffff"
         app:layout_constraintTop_toBottomOf="@+id/btnKakaoDisconnectApp"
         tools:layout_editor_absoluteX="0dp" />

@@ -6,10 +6,10 @@
 extern "C"
 {
   JNIEXPORT void JNICALL
-  Java_net_dev_modules_MainActivity_resume(JNIEnv *env, jobject obj);
+  Java_ac_olei_testbed_MainActivity_resume(JNIEnv *env, jobject obj);
 
   JNIEXPORT void JNICALL
-  Java_net_dev_modules_MainActivity_pause(JNIEnv *env, jobject obj);
+  Java_ac_olei_testbed_MainActivity_pause(JNIEnv *env, jobject obj);
 
 //  JNIEXPORT void JNICALL
 //  Java_com_rena_focustimer_MainActivity_backPressed(JNIEnv *env, jobject obj);

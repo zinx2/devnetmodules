@@ -32,7 +32,7 @@ Rectangle {
             sourceHeight: R.dp(100)
             imageSource: R.image("search_white.png")
             type: "image"
-            on_Clicked:
+            onClicked:
             {
                 evtSearch()
             }

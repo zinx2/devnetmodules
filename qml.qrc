@@ -7,7 +7,6 @@
         <file>qml/CPText.qml</file>
         <file>qml/CPButton.qml</file>
         <file>qml/LYMargin.qml</file>
-        <file>qml/VWMain.qml</file>
         <file>qml/CPListView.qml</file>
         <file>qml/CPPopup.qml</file>
         <file>qml/CPToast.qml</file>
@@ -16,5 +15,10 @@
         <file>qml/VWDesc.qml</file>
         <file>qml/CPImageView.qml</file>
         <file>qml/CPImage.qml</file>
+        <file>qml/VWLoginEmail.qml</file>
+        <file>qml/VWLoginDesk.qml</file>
+        <file>qml/VWHome.qml</file>
+        <file>qml/VWJoinDesk.qml</file>
+        <file>qml/VWJoinEmail.qml</file>
     </qresource>
 </RCC>

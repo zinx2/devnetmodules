@@ -81,7 +81,7 @@ Paper {
                 type: "image"
                 imageSource: R.image("btn_pre.png")
                 anchors.verticalCenter: parent.verticalCenter
-                on_Clicked:
+                onClicked:
                 {
                     no = no - 1;
                     if(!opt.ds)
@@ -109,7 +109,7 @@ Paper {
                 type: "image"
                 imageSource: R.image("btn_next.png")
                 anchors.verticalCenter: parent.verticalCenter
-                on_Clicked:
+                onClicked:
                 {
                     no = no + 1;
                     if(!opt.ds)

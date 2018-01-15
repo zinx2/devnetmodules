@@ -2,7 +2,7 @@
 #include "../src/native_app.h"
 
 
-void Java_net_dev_modules_MainActivity_resume(JNIEnv *env, jobject obj)
+void Java_ac_olei_testbed_MainActivity_resume(JNIEnv *env, jobject obj)
 {
   Q_UNUSED(env)
   Q_UNUSED(obj)
@@ -13,7 +13,7 @@ void Java_net_dev_modules_MainActivity_resume(JNIEnv *env, jobject obj)
   }
 }
 
-void Java_net_dev_modules_MainActivity_pause(JNIEnv *env, jobject obj)
+void Java_ac_olei_testbed_MainActivity_pause(JNIEnv *env, jobject obj)
 {
     Q_UNUSED(env)
     Q_UNUSED(obj)

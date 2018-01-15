@@ -3,6 +3,7 @@
     package="net.techpda.snslogin">
 
     <application
+        android:name=".ApplicationController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,7 +18,23 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".UserKakao" />
-    </application>
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
 
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <activity android:name=".UserKaKao" />
+        <activity android:name=".KakaoLoginActivity" />
+        <activity android:name=".KakaoSignupActivity" />
+        <activity android:name=".FacebookLoginActivity" />
+        <activity android:name=".HomeActivity" />
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

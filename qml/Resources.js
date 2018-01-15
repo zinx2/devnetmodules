@@ -8,6 +8,7 @@ function qml() { return "../qml/" + name }
 function os() { return Qt.platform.os; }
 
 var height_titlaBar = dp(144);
+var height_button_middle = dp(144);
 
 var color_appTitlebar = "#272e36"
 var color_appTitleText = "#ffffff"
@@ -16,6 +17,12 @@ var color_bgColor001 = "#e4e5e9"
 var color_buttonColor001 = "#272e36"
 var color_orange = "#f6712a"
 var color_toast = "#656565"
+
+var color_kut_orange = "#ff7f00"
+var color_kut_blue = "#183072"
+var color_kut_lightBlue = "#22449c"
+var color_kut_lightGray = "#b3b3aa"
+var color_kut_gray = "#4c4c4c"
 
 var MARGIN_XL     =   pt(45)//80
 var MARGIN_L      =  pt(37.5)//72
@@ -36,13 +43,18 @@ var font_M           = pt(21.5)//41
 var font_S         =  pt(19)//36
 var font_XS         =  pt(17)//32.5
 
-var string_title  = "Modules TEST"
-var view_file_desc = "VWDesc.qml"
+
+var string_title  = "OLEI Testbed"
+
 
 var design_size_width = di.width();
 var design_size_height = di.height();
 
 var view_file_popup = "CPPopup.qml"
 
-
+var view_file_home = "VWHome.qml"
+var view_file_joinDesk = "VWJoinDesk.qml"
+var view_file_joinEmail = "VWJoinEmail.qml"
+var view_file_loginEmail = "VWLoginEmail.qml"
+var view_file_desc = "VWDesc.qml"
 

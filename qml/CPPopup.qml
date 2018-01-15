@@ -55,7 +55,7 @@ Rectangle
                     sourceHeight: R.dp(100)
                     imageSource: R.image("close_white.png")
                     type: "image"
-                    on_Clicked:
+                    onClicked:
                     {
                         evtBack()
                     }

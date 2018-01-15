@@ -25,7 +25,7 @@ ApplicationWindow {
         anchors.fill: parent
         visible: true
 
-        initialItem: VWMain
+        initialItem: VWLoginDesk
         {
 
         }

@@ -11,8 +11,8 @@ Rectangle {
     signal evtBack()
     signal evtSearch()
 
-    width: opt.ds ? R.design_size_width : parent.width
-    height: opt.ds ? R.design_size_height : parent.height
+//    width: opt.ds ? R.design_size_width : parent.width
+//    height: opt.ds ? R.design_size_height : parent.height
 
     Rectangle
     {
@@ -31,7 +31,7 @@ Rectangle {
             sourceWidth: R.dp(100)
             sourceHeight: R.dp(100)
             type: "image"
-            on_Clicked:
+            onClicked:
             {
                 evtBack()
             }
@@ -68,7 +68,7 @@ Rectangle {
             sourceHeight: R.dp(100)
             imageSource: R.image("search_white.png")
             type: "image"
-            on_Clicked:
+            onClicked:
             {
                 if (Qt.inputMethod.visible)
                     Qt.inputMethod.hide()
